@@ -55,10 +55,10 @@ const Login = () => {
 
     return (
         <div>
-            <div className="card max-w-xl shadow-xl bg-amber-300 my-20 mx-auto rounded-sm">
-                <h2 className="text-center text-2xl text-amber-700 font-semibold pt-10">Log In</h2>
-                <p className=" text-center">If you do not have any account <Link to="/register"><span className="text-amber-700 font-semibold">Sign up</span></Link> here</p>
-                <p className="text-center">Or, You Can Login with <a onClick={handleGoogleLogIn} className="text-amber-700 font-semibold">Google</a></p>
+            <div className="card max-w-xl shadow-xl bg-sky-300 my-20 mx-auto rounded-sm">
+                <h2 className="text-center text-2xl text-sky-700 font-semibold pt-10">Log In</h2>
+                <p className=" text-center">If you do not have any account <Link to="/register"><span className="text-sky-700 font-semibold">Sign up</span></Link> here</p>
+                <p className="text-center">Or, You Can Login with <a onClick={handleGoogleLogIn} className="text-sky-700 font-semibold">Google</a></p>
                 <form onSubmit={handleLogin} className="card-body">
                     <div className="form-control">
                         <label className="label">
@@ -76,7 +76,7 @@ const Login = () => {
                         errorMessage && <p className="text-center text-red-500">{errorMessage}</p>
                     }
                     <div className="mt-6 mx-auto">
-                        <button className="btn normal-case text-lg bg-amber-700 text-white hover:bg-amber-600 rounded-sm border-none">Login</button>
+                        <button className="btn normal-case text-lg bg-sky-700 text-white hover:bg-sky-600 rounded-sm border-none">Login</button>
                     </div>
                 </form>
             </div>
