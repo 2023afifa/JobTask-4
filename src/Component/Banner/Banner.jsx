@@ -9,7 +9,7 @@ const Banner = () => {
                     <div className="max-w-2xl">
                         <h1 className="mb-5 text-5xl font-bold">Effortless Task Management: Streamline Your Workflow</h1>
                         <p className="mb-5">Welcome to our task management platform, where productivity meets simplicity. Say goodbye to scattered to-do lists and overwhelming schedules. With our intuitive tools and seamless organization features, managing your tasks has never been easier.</p>
-                        <Link to="/login">
+                        <Link to={location?.state ? "/login" : "/dashboard"}>
                             <button className="btn btn-primary">Get Started</button>
                         </Link>
                     </div>

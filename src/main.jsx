@@ -7,6 +7,10 @@ import Home from './Component/Home/Home';
 import Register from './Component/Register/Register';
 import Login from './Component/Login/Login';
 import AuthProvider from './Component/Provider/AuthProvider';
+import PrivateRoute from './Component/PrivateRoute/PrivateRoute';
+import Dashboard from './Component/Dashboard/Dashboard';
+import AddTask from './Component/AddTask/AddTask';
+import ViewTask from './Component/ViewTask/ViewTask';
 
 
 const router = createBrowserRouter([
@@ -28,6 +32,20 @@ const router = createBrowserRouter([
       },
     ]
   },
+  {
+    path: "dashboard",
+    element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
+    children: [
+      {
+        path: "addtask",
+        element: <PrivateRoute><AddTask></AddTask></PrivateRoute>,
+      },
+      {
+        path: "viewtask",
+        element: <PrivateRoute><ViewTask></ViewTask></PrivateRoute>,
+      },
+    ]
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
